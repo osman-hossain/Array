@@ -62,5 +62,55 @@ int main()
 
     return 0;
 }  
-
+```
 <image src="./images/ar2.png" width="500" title="pic"/>
+
+### array decliaration and initialization shortcut
+
+```c
+#include<stdio.h>
+int main()
+{
+    int numbers[] = {10,20,30,40,50};
+
+    for(int index=0; index<5; index++)
+    {
+        printf("%d\n",numbers[index]);
+    }
+
+    return 0;
+}  
+```  
+
+<image src="./images/ar3.png" width="500" title="Third"/>
+
+
+### sum with array
+
+```c
+#include<stdio.h>
+int main()
+{
+    while(1)
+    {
+        int numbers[5],sum=0;
+
+        for(int  index=0; index<5; index++)
+        {
+            printf("number[%d] : ",index+1);
+            scanf("%d",&numbers[index]);
+            sum=sum+numbers[index];
+            printf(" = %d\n",sum);
+        }
+
+        printf("Total number is : %d\n",sum);
+    }
+}
+```
+
+
+
+
+
+
+
