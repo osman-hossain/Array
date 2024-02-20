@@ -140,9 +140,33 @@ int main()
 ![average](./images/average.png)
 </br>
 
+### 
+```c
+#include<stdio.h>
+int main()
+{
+    while(1)
+    {
+        int numbers[5],sum=0;
+        float average;
 
+        for(int  index=0; index<5; index++)
+        {
+            printf("number[%d] : ",index+1);
+            scanf("%d",&numbers[index]);
+        }
 
+        for(int index=0; index<5; index++)
+        {
+            sum=sum+numbers[index];
+        }
 
+        printf("Total number is : %d\n",sum);
+        printf("average = %.2f",(float)sum/5);
+    }
+}
+```
 
+![float](./images/float.png)  
 
-
+continue...
