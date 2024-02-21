@@ -169,4 +169,57 @@ int main()
 
 ![float](./images/float.png)  
 
+### Maximum
+
+```c
+#include<stdio.h>
+int main()
+{
+    int numbers[]={999,15,20,45,-15,-20};
+
+    max=number[0];
+
+    for(int i=1; i<6; i++)
+    {
+        if(max<number[i])
+        {
+            max=number[i];
+        }
+    }
+
+    printf("maximum number is : %d",max);
+
+    return 0;
+}
+```
+
+<image src="./images/maximum.png" width="500" heigh="500" title="maximum" />  
+
+### minimum
+
+```c
+#include<stdio.h>
+int main()
+{
+    int number[]={999,15,20,45,-15,-20};
+
+    min=number[0];
+
+    for(int i=1; i<6; i++)
+    {
+        if(number[i]<min)
+        {
+            min=number[i];
+        }
+    }
+
+    printf("minimum number is = %d",min);
+
+    return 0;
+}
+```  
+</br>
+
+![minpic](./images/minimum.png)  
+
 continue...
