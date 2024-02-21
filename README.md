@@ -222,4 +222,38 @@ int main()
 
 ![minpic](./images/minimum.png)  
 
+### minimum & maximum
+
+```c
+#include<stdio.h>
+int main()
+{
+    int numbers[]={10,20,30,999,-4,-20};
+
+    int maximum=numbers[0];
+    int minimum=numbers[0];
+
+    for(int i=1; i<6; i++)
+    {
+        if(maximum<numbers[i])
+        {
+            maximum=numbers[i];
+        }
+
+        if(minimum>numbers[i])
+        {
+            minimum=numbers[i];
+        }
+    }
+
+    printf("minimum number is : %d",minimum);
+    printf("maximum number is : %d",maximum);
+
+    return 0;
+}
+```
+</br>
+
+<image src="./images/minmax.png" widh="500" title="minmax"/>  
+
 continue...
