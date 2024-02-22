@@ -256,4 +256,47 @@ int main()
 
 <image src="./images/minmax.png" widh="500" title="minmax"/>  
 
-continue...
+### scanf maxx minn
+
+```c
+#include<stdio.h>
+int main()
+{
+    int numbers[5],maximum,minimum;
+
+    for(int i=0; i<5; i++)
+    {
+        printf("number[%d] = ",i+1);
+        scanf("%d",&numbers[i]);
+    }
+    minimum=numbers[0];
+    maximum=numbers[0];
+
+    for(int index=1; index<5; index++)
+    {
+
+        if(maximum<numbers[index])
+        {
+            maximum=numbers[index];
+        }
+
+        if(minimum>numbers[index])
+        {
+            minimum=numbers[index];
+        }
+
+    }
+
+    printf("minimum number is : %d\n",minimum);
+    printf("maximum number is : %d",maximum);
+
+    return 0;
+}
+```
+
+![scanfmaxmin](./images/scanf.png)
+</br>
+
+
+
+
