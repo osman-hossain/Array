@@ -297,6 +297,40 @@ int main()
 ![scanfmaxmin](./images/scanf.png)
 </br>
 
+### liner search
 
+```c
+#include<stdio.h>
+int main()
+{
+    while(1)
+    {
+    int numbers[]={10,20,999,-3,-22,144},target,found;
+
+    printf("Enter the finding number : ");
+    scanf("%d",&target);
+
+    found = -1;
+
+    for(int i=0; i<6; i++)
+    {
+        if(target==numbers[i])
+        {
+            found=i;
+            break;
+        }
+    }
+
+    if(found == -1)
+    printf("%d number not found in the list.\n",target);
+    else
+    printf("%d number is found from the serial of number[%d]\n",target,found);
+    }
+    return 0;
+}  
+```  
+<image src ="./images/liner.png" widh="500" title="liner search"/>
+
+continue . . .
 
 
