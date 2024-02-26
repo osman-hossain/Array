@@ -331,6 +331,77 @@ int main()
 ```  
 <image src ="./images/liner.png" widh="500" title="liner search"/>
 
-continue . . .
+### serialwise largest two integer
+
+```c
+#include<stdio.h>
+int main()
+{
+    int number[]={10,30},firs,second,sizeofarray;
+
+    sizeofarray=sizeof(number)/sizeof(number[0]);
+
+    if(number[0]>number[1])
+    {
+        first=number[0];
+        second=number[1];
+    }
+
+    if(number[1]>number[0])
+    {
+        first=number[1];
+        second=number[0];
+    }
+
+    printf("first number is : %d\n",first);
+    printf("second number is : %d\n",second);
+
+}
+```
+<image src="./images/" width="500" title="largest"/>
+
+### first and second largest number
+
+```c
+#include<stdio.h>
+int main()
+{
+    int numbers[]={32,45,67,55,66,69,76,9,76},sizeofarray=sizeof(numbers)/sizeof(numbers[0]),first,second;
+
+    if(numbers[0]>numbers[1])
+    {
+        first=numbers[0];
+        second=numbers[1];
+    }
+    else
+    {
+        first=numbers[1];
+        second=numbers[0];
+    }
+
+    for(int index=2; index<sizeofarray; index++)
+    {
+        if(numbers[index]>first)
+        {
+            second=first;
+            first=numbers[index];
+        }
+        else
+        if(numbers[index]>second && numbers[index]!=first)
+        {
+            second=numbers[index];
+        }
+    }
+
+    printf("First number is : %d\n",first);
+    printf("Second numebr is : %d\n",second);
+
+    return 0;
+}
+```  
+
+<image src="./images/three.png" width="500" title="three"/>
+
+</br>
 
 
