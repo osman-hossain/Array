@@ -337,7 +337,7 @@ int main()
 #include<stdio.h>
 int main()
 {
-    int number[]={10,30},firs,second,sizeofarray;
+    int number[]= {10,30},first,second,sizeofarray;
 
     sizeofarray=sizeof(number)/sizeof(number[0]);
 
@@ -347,7 +347,7 @@ int main()
         second=number[1];
     }
 
-    if(number[1]>number[0])
+    else
     {
         first=number[1];
         second=number[0];
@@ -356,9 +356,11 @@ int main()
     printf("first number is : %d\n",first);
     printf("second number is : %d\n",second);
 
+    return 0;
 }
+
 ```
-<image src="./images/" width="500" title="largest"/>
+<image src="./images/firstse.png" width="500" title="largest"/>
 
 ### first and second largest number
 
