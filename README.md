@@ -406,4 +406,155 @@ int main()
 
 </br>
 
+### create a matrix
 
+```c
+#include<stdio.h>
+int main()
+{
+    int matrix[3][2]={
+        {10,20},
+        {30,40},
+        {50,60}
+    };
+
+    printf("%d ",matrix[0][0]);
+    printf("%d ",matrix[0][1]);
+    printf("%d ",matrix[1][0]);
+    printf("%d ",matrix[1][1]);
+    printf("%d ",matrix[2][0]);
+    printf("%d ",matrix[2][1]);
+
+    return 0;
+}
+```
+
+<image src="./images/matrix.png" width="500" title="matrix"/>  
+
+### matrix in short
+
+```c
+#include<stdio.h>
+int main()
+{
+    int matrix[3][2]={
+        {10,20},
+        {30,40},
+        {50,60}
+    };
+
+    for(int i=0; i<3; i++)
+    {
+        for(int j=0; j<2; j++)
+        {
+            printf("%d ",matrix[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
+
+![shortmatrix](./images/shortmatrix.png)
+
+### using scanf
+
+```c
+#include<stdio.h>
+int main()
+{
+    int matrix[3][2];
+
+    for(int row=0; row<3; row++)
+    {
+        for(int col=0; col<2; col++)
+        {
+            printf("number[%d][%d] = ",row,col);
+            scanf("%d",&matrix[row][col]);
+        }
+    }
+
+    for(int i=0; i<3; i++)
+    {
+        for(int j=0; j<2; j++)
+        {
+            printf("%d ",matrix[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
+
+![scanf](./images/usingscanf.png)
+
+</br>
+
+### sum of matrix
+
+```c
+#include<stdio.h>
+int main()
+{
+    int A[3][2], B[3][2],C[3][2];
+
+    printf(" A \n");
+
+    for(int row=0; row<3; row++)
+    {
+        for(int col=0; col<2; col++)
+        {
+            printf("number[%d][%d] = ",row,col);
+            scanf("%d",&A[row][col]);
+        }
+    }
+
+    for(int i=0; i<3; i++)
+    {
+        for(int j=0; j<2; j++)
+        {
+            printf("%d ",A[i][j]);
+        }
+        printf("\n");
+    }
+
+    // B matrix
+
+    printf(" B \n");
+        for(int row=0; row<3; row++)
+    {
+        for(int col=0; col<2; col++)
+        {
+            printf("number[%d][%d] = ",row,col);
+            scanf("%d",&B[row][col]);
+        }
+    }
+
+    for(int i=0; i<3; i++)
+    {
+        for(int j=0; j<2; j++)
+        {
+            printf("%d ",B[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf(" Sum \n");
+
+    for(int i=0; i<3; i++)
+    {
+        for(int j=0; j<2; j++)
+        {
+           C[i][j]=A[i][j]+B[i][j];
+           printf("%d ",C[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
+</br>
+
+![sum](./images/summatrixx.png)
+
+continue...
