@@ -557,4 +557,51 @@ int main()
 
 ![sum](./images/summatrixx.png)
 
+### sum avarage multiply & divition
+
+```c
+#include<stdio.h>
+int main()
+{
+    int numbers[]= {15,2,3,4,5},size=sizeof(numbers)/sizeof(numbers[0]),sum=0,multiply=1,subtraction= numbers[0] ;
+    float average,division=numbers[0];
+
+    for(int i=0; i<size; i++)
+    {
+        sum=sum+numbers[i];
+        multiply=multiply*numbers[i];
+
+    }
+
+    for(int i=1; i<size; i++)
+    {
+        division=division/(float)numbers[i];
+        subtraction=subtraction-numbers[i];
+    }
+
+    for(int space=1; space<=50; space++)
+    {
+        printf(" ");
+    }
+    printf("sum = %d\n",sum);
+    for(int space=1; space<=50; space++)
+    {
+        printf(" ");
+    }
+    printf("average = %.2f\n",(float)sum/size);
+    for(int space=1; space<=50; space++)
+    {
+        printf(" ");
+    }
+    printf("division = %f\n",division);
+    for(int space=1; space<=50; space++)
+    {
+        printf(" ");
+    }
+    printf("subtraction = %d",subtraction);
+    getch();
+}
+```
+
+<image src="./images/all.png" width="500" title="picall"/>
 continue...
