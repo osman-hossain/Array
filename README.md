@@ -604,4 +604,36 @@ int main()
 ```
 
 <image src="./images/all.png" width="500" title="picall"/>
-continue...
+
+
+_Take_ __limited__ ~~number~~ of `input`
+
+```c
+#include<stdio.h>
+int main()
+{
+    int numbers[100],n,sum;
+    float average;
+
+    printf("Enter the range of numbers : ");
+    scanf("%d",&n);
+
+    for(int i=0; i<n; i++)
+    {
+        scanf("%d",&numbers[i]);
+    }
+
+    for(int j=0; j<n; j++)
+    {
+        sum=sum+numbers[j];
+    }
+
+    printf("sum = %d \n",sum);
+    printf("average = %.2f",(float)sum/n);
+    getch();
+}
+```
+![input](./images/input.png)  
+</br>
+
+continue . .
