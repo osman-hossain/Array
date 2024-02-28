@@ -636,4 +636,31 @@ int main()
 ![input](./images/input.png)  
 </br>
 
-continue . .
+### normal fibonacci
+```c
+#include<stdio.h>
+int main()
+{
+    int number,first=0,second=1,i,fibo;
+
+    printf("Enter the series range : ");
+    scanf("%d",&number);
+
+    while(i<=number)
+    {
+        if(i<=1)
+        {
+            fibo=i;
+            printf("%d = %d\n",i,fibo);
+        }
+        else
+        {
+            fibo=first+second;
+            printf("%d + %d = %d\n",first,second,fibo);
+            first=second;
+            second=fibo;
+        }
+        i++;
+    }
+    return 0;
+}
