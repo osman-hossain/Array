@@ -664,3 +664,39 @@ int main()
     }
     return 0;
 }
+```
+![fibo](./images/fibo.png)
+</br>
+
+_fibonacci_ __num__~~ber~~ using `array`
+
+```c
+#include<stdio.h>
+int main()
+{
+    int number,a[30],n;
+
+    printf("Enter the term of series : ");
+    scanf("%d",&n);
+
+    a[0]=0;
+    a[1]=1;
+
+    for(int i=0; i<n; i++)
+    {
+        if(i<=1)
+        {
+            printf("%d = %d\n",i,a[i]);
+        }
+        else
+        {
+            a[i]=a[i-1]+a[i-2];
+            printf("%d + %d = %d \n",a[i-2],a[i-1],a[i]);
+        }
+    }
+    return 0;
+}
+```
+
+<image src="./images/fibonacciarray.png" width="500" title="fibonacci"/>
+
