@@ -700,3 +700,55 @@ int main()
 
 <image src="./images/fibonacciarray.png" width="500" title="fibonacci"/>
 
+_created_ ~~by~~ `me`
+
+```c
+#include<stdio.h>
+int main()
+{
+    int number[]= {4,5,6,2,1},total,maximum,j,latest,a[30],minimum,update;
+
+    total=sizeof(number)/sizeof(number[0]);
+    maximum=number[0];
+    minimum=number[0];
+    for(int i=1; i<total; i++)
+    {
+        if(number[i]>maximum)
+        {
+            maximum=number[i];
+        }
+        if(number[i]<minimum)
+        {
+            minimum=number[i];
+        }
+    }
+    latest=maximum;
+    printf("minimum = %d \n",minimum);
+    printf("latest = %d\n",latest);
+
+
+
+    for(int i=1; i<total; i++)
+    {
+        update=minimum;
+
+        for(j=0; j<total; j++)
+        {
+            if(number[j]<latest && number[j]>=minimum)
+            {
+                if(number[j]>=update)
+                    maximum=number[j];
+                    update=maximum;
+                    printf("update = %d\n",update);
+            }
+        }
+        latest=maximum;
+        printf("latest %d = %d\n\n",number[i],latest);
+    }
+
+    return 0;
+}
+```
+![image](./images/origin.png)
+
+continue ...
