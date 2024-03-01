@@ -751,4 +751,39 @@ int main()
 ```
 ![image](./images/origin.png)
 
-continue ...
+### array copy
+
+```c
+// write a programme that print copy of array
+#include<stdio.h>
+int main()
+{
+        int a[100],a1[100],num;
+
+        printf("Enter the terms of number : ");
+        scanf("%d",&num);
+
+        for(int i=0; i<num; i++)
+        {
+            printf("number[%d] = ",i);
+            scanf("%d",&a[i]);
+        }
+
+        printf("array 1 = ");
+        for(int i=0; i<num; i++)
+        {
+            printf("%d ",a[i]);
+
+            a1[i]=a[i];
+        }
+        printf("\narray 2 = ");
+        for(int i=0; i<num; i++)
+        {
+            printf("%d ",a1[i]);
+        }
+    getch();
+}
+```
+
+![image](./images/copy.png)
+</br>
