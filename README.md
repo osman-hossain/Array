@@ -787,3 +787,50 @@ int main()
 
 ![image](./images/copy.png)
 </br>
+
+### sum
+
+```c
+#include<stdio.h>
+int main()
+{
+    while(1)
+    {
+        int a[3][2],b[3][2],c[3][2],sum=0;
+        float average;
+
+        for(int i=0; i<3; i++)
+        {
+            for(int j=0; j<2; j++)
+            {
+                printf("a[%d][%d] = ",i,j);
+                scanf("%d",&a[i][j]);
+            }
+        }
+
+        for(int i=0; i<3; i++)
+        {
+            for(int j=0; j<2; j++)
+            {
+                printf("b[%d][%d] = ",i,j);
+                scanf("%d",&b[i][j]);
+            }
+        }
+        printf("sum :\n");
+
+        for(int i=0; i<3; i++)
+        {
+            for(int j=0; j<2; j++)
+            {
+                sum=a[i][j]+b[i][j];
+                c[i][j]=sum;
+                printf("%d ",c[i][j]);
+            }
+            printf("\n");
+        }
+    }
+    return 0;
+}
+```  
+<image src="./images/sumnew.png" width="500" title="sum"/>
+
