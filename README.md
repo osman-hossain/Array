@@ -922,5 +922,95 @@ _in_~~p~~u __t__ `3*3`
 
 </br>
 
+### addition && subtraction
+
+```c
+#include<stdio.h>
+int main()
+{
+    while(1)
+    {
+
+        int a[100][100],b[100][100],c[100][100],sum,number,row,column;
+
+        printf("enter the terms of row : ");
+        scanf("%d",&row);
+
+        printf("enter the terms of column : ");
+        scanf("%d",&column);
+
+        printf("\nenter the numbers for group a \n");
+
+        for(int i=0; i<row; i++)
+        {
+            for(int j=0; j<column; j++)
+            {
+                printf("a[%d][%d] = ",i,j);
+                scanf("%d",&a[i][j]);
+            }
+            printf("\n");
+        }
+
+        printf("\nenter the numbers for group b \n");
+
+        for(int i=0; i<row; i++)
+        {
+            for(int j=0; j<column; j++)
+            {
+                printf("b[%d][%d] = ",i,j);
+                scanf("%d",&b[i][j]);
+            }
+            printf("\n");
+        }
+        printf("\tthe number of A\n");
+        for(int i=0; i<row; i++)
+        {
+            for(int j=0; j<column; j++)
+            {
+                printf("a[%d][%d] = %d\t",i,j,a[i][j]);
+            }
+            printf("\n");
+        }
+        printf("\tthe number of B\n");
+
+        for(int i=0; i<row; i++)
+        {
+            for(int j=0; j<column; j++)
+            {
+                printf("b[%d][%d] = %d\t",i,j,b[i][j]);
+            }
+            printf("\n");
+        }
+        printf("\tsum \n");
+
+        for(int i=0; i<row; i++)
+        {
+            for(int j=0; j<column; j++)
+            {
+                c[i][j]=a[i][j]+b[i][j];
+                printf("%d + %d = %d\t",a[i][j],b[i][j],c[i][j]);
+            }
+            printf("\n\n");
+        }
+
+        for(int i=0; i<row; i++)
+        {
+            for(int j=0; j<column; j++)
+            {
+                c[i][j]=a[i][j]-b[i][j];
+                printf("%d - %d = %d\t",a[i][j],b[i][j],c[i][j]);
+            }
+            printf("\n");
+        }
+    }
+    return 0;
+}
+```
+</br>
+
+![additionsubtraction](./images/addsubt.png)  
+
+continue...
+
 
 
