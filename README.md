@@ -911,9 +911,12 @@ int main()
 }
 ```
 _in_~~pu~~__t__ `3*2`
+
+</br>
+
 <image src="./images/matrixsum1.png" width="500" title="input3*2"/>
 
-_in_~~p~~u __t__ `3*3`
+_in_~~p~~u __t__ `3*3`  
 
 ![input3*3](./images/matrixsum2.png)
 
