@@ -1338,6 +1338,7 @@ int main()
         }
     }
     printf("\n");
+    printf("Entered Matrix\n");
 
     for(i=0; i<row; i++)
     {
@@ -1349,6 +1350,7 @@ int main()
     }
 
     printf("\n");
+    printf("Transpose Matrix\n");
     for(i=0; i<row; i++)//3
     {
         for(j=0; j<column; j++)// 2
@@ -1367,9 +1369,9 @@ int main()
     }
     return 0;
 }
-```
+```  
 
-![image](./images/transform.png)
+![image](./images/transpose.png)
 
 </br>
 
