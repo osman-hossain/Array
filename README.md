@@ -1314,4 +1314,62 @@ int main()
 ### example pic  
 <image src="./images/sam.png" width="500" title="same"/>  
 
-continue ...
+### row value transfer to column value  
+
+```c
+/*write a programme
+that print transformation*/
+#include<stdio.h>
+int main()
+{
+    int a[100][100],b[100][100],i,j,row,column;
+
+    printf("enter the terms of row : ");
+    scanf("%d",&row);
+    printf("enter the terms of column : ");
+    scanf("%d",&column);
+
+    for(i=0; i<row; i++)
+    {
+        for(j=0; j<column; j++)
+        {
+            printf("a[%d][%d] = ",i,j);
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("\n");
+
+    for(i=0; i<row; i++)
+    {
+        for(j=0; j<column; j++)
+        {
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\n");
+    for(i=0; i<row; i++)//3
+    {
+        for(j=0; j<column; j++)// 2
+        {
+            b[j][i]=a[i][j];
+        }
+    }
+
+    for(i=0; i<column; i++)
+    {
+        for(j=0; j<row; j++)
+        {
+            printf("%d ",b[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
+
+![image](./images/transform.png)
+
+</br>
+
