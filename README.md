@@ -1311,7 +1311,7 @@ int main()
 ```  
 ![same](./images/same.png)
 
-### example pic
+### example pic  
 <image src="./images/sam.png" width="500" title="same"/>  
 
 continue ...
