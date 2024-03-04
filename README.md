@@ -1375,3 +1375,59 @@ int main()
 
 </br>
 
+### if i<0 printf(" + ");
+
+### diagonal
+
+```c
+#include<stdio.h>
+int main()
+{
+    while(1)
+    {
+        int a[100][100],i,j,sum=0,row,column;
+
+        printf("Enter the terms of row : ");
+        scanf("%d",&row);
+        printf("Enter the terms of column : ");
+        scanf("%d",&column);
+
+        for(i=0; i<row; i++)
+        {
+            for(j=0; j<column; j++)
+            {
+                printf("a[%d][%d] = ",i,j);
+                scanf("%d",&a[i][j]);
+            }
+        }
+        printf("\nEntered Matrix\n");
+
+        for(i=0; i<row; i++)
+        {
+            for(j=0; j<column; j++)
+            {
+                printf("%d ",a[i][j]);
+            }
+            printf("\n");
+        }
+        printf("\nDiagonal Elements : \n");
+
+        for(i=0; i<row; i++)
+        {
+            for(j=0; j<column; j++)
+            {
+                if(i==j)
+                {
+                    if(i!=0)
+                        printf(" + ");
+                    sum=sum+a[i][j];
+                    printf("%d",a[i][j]);
+                }
+            }
+        }
+        printf(" = %d\n\n",sum);
+    }
+    getchar();
+}
+```  
+![DIAGONAL](./images/diagonal.png)</br>
