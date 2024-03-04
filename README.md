@@ -1111,6 +1111,93 @@ int main()
 
 ![multiply](./images/multiply.png)
 
+### multiply column && row
+
+```c
+#include<stdio.h>
+int main()
+{
+    while(1)
+    {
+        int a[100][100],b[100][100],c[100][100],row1,col1,row2,col2,i,j,k,sum;
+
+        printf("enter the terms of number for the first row : ");
+        scanf("%d",&row1);
+        printf("enter the terms of number for the first column : ");
+        scanf("%d",&col1);
+        printf("enter the terms of number for the second row : ");
+        scanf("%d",&row2);
+        printf("enter the terms of number for the second column : ");
+        scanf("%d",&col2);
+
+        while(col1!=row2)
+        {
+            printf("Error !! Please input the second row number same as first column : \n");
+
+            printf("enter the terms of number for the first row : ");
+            scanf("%d",&row1);
+            printf("enter the terms of number for the first column : ");
+            scanf("%d",&col1);
+            printf("enter the terms of number for the second row : ");
+            scanf("%d",&row2);
+            printf("enter the terms of number for the second column : ");
+            scanf("%d",&col2);
+        }
+
+        printf("\ta\n");
+
+        for(i=0; i<row1; i++)
+        {
+            for(j=0; j<col1; j++)
+            {
+                printf("a[%d][%d] = ",i,j);
+                scanf("%d",&a[i][j]);
+            }
+            printf("\n");
+        }
+
+        printf("\tb\n");
+
+        for(i=0; i<row2; i++)
+        {
+            for(j=0; j<col2; j++)
+            {
+                printf("b[%d][%d] = ",i,j);
+                scanf("%d",&b[i][j]);
+            }
+            printf("\n");
+        }
+        printf("\nmultiply\n");
+
+        for(i=0; i<row1; i++)
+        {
+            for(j=0; j<col2; j++)
+            {
+                sum=0;
+                for(k=0; k<row2; k++)
+                {
+                    sum=sum+a[i][k]*b[k][j];
+                    printf("%d * %d = %d",a[i][k],b[k][j],a[i][k]*b[k][j]);
+
+                    if(k!=row2-1)
+                    {
+                        printf("  +  ");
+                    }
+                }
+                c[i][j]=sum;
+                printf("\tc[%d][%d] = %d\t",i,j,sum);
+            }
+            printf("\n\n");
+        }
+    }
+    getch();
+}
+```  
+![multiplication](./images/multiplication.png)  
+
+
+
+
 
 
 
