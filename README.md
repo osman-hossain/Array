@@ -1515,3 +1515,133 @@ int main()
 
 ![upper&lower](./images/upperlowersum.png)
 
+### upper and lower
+
+```c
+#include<stdio.h>
+int main()
+{
+    while(1)
+    {
+
+        int a[100][100],uppersum=0,lowersum=0,sum,i,j,row,column,diagonal=0,count=1;
+
+        printf("Enter the terms of row : ");
+        scanf("%d",&row);
+        printf("Enter the terms of column : ");
+        scanf("%d",&column);
+
+        for(i=0; i<row; i++)
+        {
+            for(j=0; j<column; j++)
+            {
+                printf("a[%d][%d] = ",i,j);
+                scanf("%d",&a[i][j]);
+            }
+        }
+
+        printf("\nEntered Matrix\n");
+
+        for(i=0; i<row; i++)
+        {
+            for(j=0; j<column; j++)
+            {
+                printf("%d ",a[i][j]);
+            }
+            printf("\n");
+        }
+
+        printf("\nDiagonal Matrix\n");
+
+        for(i=0; i<row; i++)
+        {
+            for(j=0; j<column; j++)
+            {
+                if(i==j)
+                {
+                    if(i!=0)
+                    {
+                        printf("  +  ");
+                    }
+                    printf("%d",a[i][j]);
+                    diagonal=diagonal+a[i][j];
+                }
+            }
+        }
+        printf(" = %d\n",diagonal);
+
+        printf("\nUppersum and Lowersum\n");
+
+        for(i=0; i<row; i++)
+        {
+            for(j=0; j<column; j++)
+            {
+                if(j>i)
+                {
+                    uppersum=uppersum+a[i][j];
+
+                }
+                if(j<i)
+                {
+                    lowersum=lowersum+a[i][j];
+                }
+            }
+        }
+        printf("The sum of upper triangle is : %d\n",uppersum);
+        printf("The sum of lower triangle is : %d\n",lowersum);
+
+        printf("\nUpper Sum Triangle\n\n");
+        count=0;
+        uppersum=0;
+                for(i=0; i<row; i++)
+        {
+            for(j=0; j<column; j++)
+            {
+                if(j>i)
+                {
+                    count=count+1;
+                    if(count!=1)
+                    {
+                        printf(" + ");
+                    }
+                    printf("%d",a[i][j]);
+                    uppersum=uppersum+a[i][j];
+
+                }
+            }
+        }
+        printf(" = %d\n",uppersum);
+
+        printf("\nLower Sum Triangle\n\n");
+
+        count=0;
+        lowersum=0;
+        for(i=0; i<row; i++)
+        {
+            for(j=0; j<column; j++)
+            {
+
+                if(j<i)
+                {
+                    count=count+1;
+                    if(count!=1)
+                    {
+                        printf(" + ");
+                    }
+
+                    printf("%d",a[i][j]);
+                    lowersum=lowersum+a[i][j];
+                }
+            }
+        }
+        printf(" = %d\n",lowersum);
+
+    }
+    return 0;
+}
+```
+
+<image src="./images/UP.png" width="500" title="uplo"/>
+
+![upper](./images/LO.png)
+
